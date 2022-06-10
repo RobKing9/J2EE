@@ -1,0 +1,28 @@
+#learn_header{
+    height: 110px;
+    width: 120%;
+    box-shadow: 10px 5px 10px orange;
+}
+
+
+#learn_header .learn_h_left{
+    width: 450px;
+    height: 88px;
+    margin: 0 auto;
+}
+
+#learn_header .learn_h_left h3{
+    float: left;
+    margin-top: 80px;
+    margin-left: 0px;
+}
+
+.box {
+    margin-top: 50px;
+    margin-left:650px;
+    width:230px;
+    height:250px;
+    position:absolute;
+    background-color: antiquewhite;
+    /*text-align: center;*/
+}

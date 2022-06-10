@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model = "parentMessage">
+        <test :message="parentMessage"></test>
+    </div>
+
+    <script>
+        Vue.component("test", {
+            props:['message'],
+            template:'<span>{{message}}</span>'
+        })
+        new Vue({
+            el:#app,
+            data:{
+                parentMessage:''
+            }
+        });
+    </script>
+
+</body>
+</html>
