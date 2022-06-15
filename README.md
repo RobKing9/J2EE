@@ -9,6 +9,11 @@
 ## 目录
 
 - [项目介绍](#项目介绍) 
+  - [实验一](#实验一)
+  - [实验二](#实验二)
+  - [实验三](#实验三)
+  - [实验四](#实验四)
+  - [实验五](#实验五)
 - [上手指南](#上手指南)
   - [开发前的配置要求](#开发前的配置要求)
   - [安装步骤](#安装步骤)
@@ -22,23 +27,62 @@
 
 ## 项目介绍
 
+### 实验一
+*基于CSS+HTML+JS开发简单个人网站*
+* 个人网站分为四个部分：注册页面，登录界面，主界面，以及四个界面
+* 另外我用Golang实现了网站后端，基于gin框架，将用户注册的账号密码储存在MySQL中
+### 实验二
+*基于Vue的图书购物车*
+* 点击移除按钮，则移除一行记录的显示；
+* 点击“+”或者“-”按钮，则购买数量发生相应的变化，且总价也随之发生变化；
+* 当页面所有记录移除完，则在页面上显示“购物车为空”。
+* 当购买数量为“0”时，“-”按钮变成不可使用。
+### 实验三
+*Vue-router的使用*
+* 通过vue-cli 脚手架搭建 vue-cli 项目
+* 使用Vue-router实现路由跳转和路由嵌套
+### 实验四
+*基于IDEA+SpringBoot+Mave+Thymeleaf的系统实现*
+* 通过IDE创建springboot项目
+ * pom.xml中引入thymeleaf依赖，在classpath:/templates/下新建HTML页面(采用实验一创建的页面)，新建controller进行测试，访问页面后返回success成功数据
+### 实验五
+*SpringBoot整合Redis点赞功能的简单实现*
+* 通过给一篇文章点赞，点赞成功+1,取消点赞-1，数据都放在reids缓存里
+* 引入Springboot整合redis的依赖，并在配置文件中配置redis相关属性
+  
+```
+spring.redis.database=0
+spring.redis.host=127.0.0.1
+spring.redis.port=6379
+spring.redis.password=
+spring.redis.jedis.pool.max-active=8
+spring.redis.jedis.pool.max-wait=-1
+spring.redis.jedis.pool.max-idle=10
+spring.redis.jedis.pool.min-idle=2
+spring.redis.timeout=6000
+  
+```
+
+
 ## 上手指南
 
 
 ### 开发前的配置要求
 
 1. node.js
-2. maven
-3. nvm
+2. java
+3. maven
+4. nvm
+5. vue
 
 ### **安装步骤**
 
-1. 官网直接下载
-2. 配置环境变量测试
+1. git clone此项目
 
 ```sh
 git clone https://github.com/RobKing9/J2EE.git
 ```
+&nbsp; &nbsp; &nbsp;2.在releases直接下载源代码
 
 ## 文件目录说明
 ```
@@ -79,7 +123,7 @@ J2EE
 
 ### 作者
 
-2768817839@qq.com
+QQ邮箱：2768817839@qq.com
 
 
  *您也可以在贡献者名单中参看所有参与该项目的开发者。*
