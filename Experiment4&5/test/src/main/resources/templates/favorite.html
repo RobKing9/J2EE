@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/favorite.css">
+    <title>mylife</title>
+</head>
+<body>
+<a href="http://localhost:8080/index">返回我的博客</a>
+<div id="mylife_header">
+    <div class="mylife_h_center">
+        <div class="mylife_h_left">
+            <h3 style="margin-top: 50px; text-align: center; font-size: xx-large;">MyLife</h3>
+        </div>
+    </div>
+</div>
+
+<div id="div2">
+    <div id="photo_box">
+        <img src="/images/001.jpg">
+        <img src="/images/002.jpg">
+        <img src="/images/003.jpg">
+        <img src="/images/004.jpg">
+        <img src="/images/005.jpg">
+        <img src="/images/006.jpg">
+        <img src="/images/007.jpg">
+        <img src="/images/008.jpg">
+        <img src="/images/009.jpg">
+        <img src="/images/010.jpg">
+        <img src="/images/011.jpg">
+    </div>
+    <div style=" position:absolute;width:100px;height:50px;left:80%;top:20%;">
+        <div id="likeDiv" class="like unliked"></div>
+        <img id="likeIcon" onclick="btn_like()" class="unlikedIcon"
+             src="/images/favoriteicon.png"
+             style="margin-left: 4px;width:32px;height:32px;vertical-align: middle;">
+        <p id="likeCount" style="display:inline-block;vertical-align: middle;">---</p>
+    </div>
+</div>
+</body>
+<script src="/js/LikeButton.js"></script>
+<script>
+    var currentPage = "favorite"
+
+    function btn_like() {
+        onClickLike(currentPage);
+    }
+    window.onload=function(){
+        var collection = document.getElementsByClassName("box");
+        var i;
+        for(i=0;i<collection.length;i++){
+            collection[i].classList.add("box"+(i+1));
+        }
+        // 加载点赞数
+        LoadLikeCount(currentPage);
+    }
+
+
+</script>
+</html>

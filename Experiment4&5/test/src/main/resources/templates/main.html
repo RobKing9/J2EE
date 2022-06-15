@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- suppress ThymeleafVariablesResolveInspection -->
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/learn.css">
+    <title>learn</title>
+</head>
+<body>
+<a href="http://localhost:8080/index">返回我的博客</a>
+<div id="learn_header">
+    <div class="learn_h_center">
+        <div class="learn_h_left">
+            <h3 style="margin-top: 50px;  font-size: xx-large;">MyLearn</h3>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+<!--    <p style="text-align: center;">学习内容</p>-->
+    <ol>
+        <!--/*@thymesVar id="list" type="test/"*/-->
+        <li th:each="item:${list}" th:text="${item.content}"></li>
+    </ol>
+</div>
+
+</body>
+</html>
